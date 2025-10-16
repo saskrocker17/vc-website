@@ -1,0 +1,130 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="A simple responsive starter website" />
+  <title>My Website</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">MySite</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Build something great.</h1>
+          <p>Responsive starter site with accessible navigation, simple JS, and clean CSS — ready for Visual Studio Code.</p>
+          <p class="hero-cta">
+            <a class="btn-primary" href="#features">Get started</a>
+            <a class="btn-outline" href="#contact">Contact us</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <!-- Put a hero image in assets/hero.jpg and reference it here -->
+          <img src="assets/hero.jpg" alt="Illustration of building a website" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Features</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Layout that works on phones, tablets and desktops.</p>
+        </article>
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Keyboard friendly nav and semantic HTML.</p>
+        </article>
+        <article class="card">
+          <h3>Easy to edit</h3>
+          <p>Clear CSS + small JS for common tasks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="container pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p class="price">$0 <small>/ month</small></p>
+          <ul>
+            <li>Basic features</li>
+            <li>Community support</li>
+          </ul>
+          <a class="btn-primary" href="#contact">Sign up</a>
+        </div>
+        <div class="price-card featured">
+          <h3>Pro</h3>
+          <p class="price">$9 <small>/ month</small></p>
+          <ul>
+            <li>Everything in Free</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="btn-primary" href="#contact">Get Pro</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div class="form-row">
+          <button class="btn-primary" type="submit">Send message</button>
+          <span id="form-status" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> MySite — Built with ❤️</p>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
